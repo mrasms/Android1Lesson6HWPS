@@ -1,12 +1,12 @@
-package com.example.android1lesson4;
+package com.example.android1lesson4.ui.activity.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
+import com.example.android1lesson4.R;
 import com.example.android1lesson4.databinding.ActivityMainBinding;
-import com.example.android1lesson4.fragments.FirstFragment;
+import com.example.android1lesson4.ui.fragments.first.FirstFragment;
 
 public class MainActivity extends AppCompatActivity {
 private ActivityMainBinding binding;

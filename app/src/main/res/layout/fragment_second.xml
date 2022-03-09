@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_second"
     android:background="@color/purple_200"
-    tools:context=".fragments.SecondFragment">
+    tools:context=".ui.fragments.second.SecondFragment">
 
     <Button
         android:id="@+id/btn_open"
