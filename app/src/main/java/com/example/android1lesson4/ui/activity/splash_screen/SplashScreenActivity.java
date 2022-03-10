@@ -30,7 +30,8 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void setupAnimation() {
         Animation startAnim = AnimationUtils.loadAnimation(this, R.anim.start_anim);
         binding.imLogo.setAnimation(startAnim);
-
+        Animation textAnim = AnimationUtils.loadAnimation(this, R.anim.tv_anim);
+        binding.tvAnyText.setAnimation(textAnim);
     }
 
     private void transitions() {
