@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_second"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_second"
     android:background="@color/purple_200"
     tools:context=".ui.fragments.second.SecondFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_second_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/second_fragment_list_holder" />
+
 
     <Button
         android:id="@+id/btn_open"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom"
         android:layout_margin="20dp"
         android:text="Open first fragment"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false" />
 
 </FrameLayout>

@@ -24,12 +24,12 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setupAnimation();
         transitions();
-
     }
 
     private void setupAnimation() {
         Animation startAnim = AnimationUtils.loadAnimation(this, R.anim.start_anim);
         binding.imLogo.setAnimation(startAnim);
+
         Animation textAnim = AnimationUtils.loadAnimation(this, R.anim.tv_anim);
         binding.tvAnyText.setAnimation(textAnim);
     }
