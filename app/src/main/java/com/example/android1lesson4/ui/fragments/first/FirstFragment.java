@@ -26,6 +26,7 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
 
     private ArrayList<ModelFirstFragment> firstNames;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class FirstFragment extends Fragment {
 
 
     private void setData() {
-        firstNames= DataFirstFragment.getFirstNames();
+        firstNames = DataFirstFragment.getFirstNames();
         AdapterFirstFragment adapter = new AdapterFirstFragment(firstNames);
         binding.recyclerFirstFragment.setAdapter(adapter);
     }

@@ -1,5 +1,6 @@
 package com.example.android1lesson4.ui.activity.main;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 
 import com.example.android1lesson4.R;
 import com.example.android1lesson4.databinding.ActivityMainBinding;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(
                 binding.bottomNavigation, navController);
 
+        NavigationUI.setupWithNavController(
+                binding.toolbar, navController);
+        binding.toolbar.setDrawingCacheEnabled(false);
 
     }
+
 }
