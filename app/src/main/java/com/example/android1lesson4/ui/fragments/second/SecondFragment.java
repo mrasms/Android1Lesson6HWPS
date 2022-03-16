@@ -27,6 +27,7 @@ public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
     private ArrayList<ModelSecondFragment> family;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,11 +35,11 @@ public class SecondFragment extends Fragment {
 
         return (binding.getRoot());
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setupAnimation();
-        setupListener();
         setData();
     }
 
@@ -53,18 +54,8 @@ public class SecondFragment extends Fragment {
         binding.fragmentSecond.setAnimation(fragmentAnim);
     }
 
-    private void setupListener() {
-        binding.btnOpen.setOnClickListener(view -> {
-            transitions();
-        });
-    }
-
-    private void transitions() {
-        FirstFragment firstFragment = new FirstFragment();
-        getParentFragmentManager().beginTransaction().replace(R.id.container_fragment, firstFragment).commit();
-    }
     private void setData() {
-        family= DataSecondFragment.getFamily();
+        family = DataSecondFragment.getFamily();
         AdapterSecondFragment adapter = new AdapterSecondFragment(family);
         binding.recyclerSecondFragment.setAdapter(adapter);
     }

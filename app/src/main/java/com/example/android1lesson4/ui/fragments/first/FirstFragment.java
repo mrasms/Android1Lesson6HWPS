@@ -38,7 +38,6 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setupAnimation();
         setData();
-        setupListener();
     }
 
     @Override
@@ -52,16 +51,6 @@ public class FirstFragment extends Fragment {
         binding.fragmentFirst.setAnimation(fragmentAnim);
     }
 
-    private void setupListener() {
-        binding.btnOpen.setOnClickListener(view -> {
-            transitions();
-        });
-    }
-
-    private void transitions() {
-        SecondFragment secondFragment = new SecondFragment();
-        getParentFragmentManager().beginTransaction().replace(R.id.container_fragment, secondFragment).commit();
-    }
 
     private void setData() {
         firstNames= DataFirstFragment.getFirstNames();
