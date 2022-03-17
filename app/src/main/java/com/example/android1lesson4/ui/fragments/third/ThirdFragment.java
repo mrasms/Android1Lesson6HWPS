@@ -48,7 +48,7 @@ public class ThirdFragment extends Fragment {
 
 
     private void setData() {
-        final RecyclerView recyclerView = binding.recyclerView;
+        RecyclerView recyclerView = binding.recyclerView;
         firstNames = DataFirstFragment.getFirstNames();
         family = DataSecondFragment.getFamily();
         adapterFirstFragment = new AdapterFirstFragment(firstNames);

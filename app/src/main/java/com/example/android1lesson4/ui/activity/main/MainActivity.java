@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationUI.setupWithNavController(
                 binding.toolbar, navController);
-        binding.toolbar.setDrawingCacheEnabled(false);
 
     }
 
